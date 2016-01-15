@@ -1,0 +1,112 @@
+/**
+ * Renders a viewItem
+ * @param item the item to be loaded
+ */
+{template .viewItem}
+    <li class="listitem view-immutable" itemid="{$item.map_id}">
+        <div class="itemtitle">
+            <label class="itemname" >{$item.name} ({$item.type})</label>
+        </div>
+        <div class="buttonset-view">
+            <a title="Click to view searchable tags" class="ui-state-default ui-corner-all ui-button-text-only">Tags</a>
+            <a title="Click to load this view" class="ui-state-default ui-corner-all ui-button-text-only">Load</a>
+        </div>
+        <p class="tags" style="display:none"><b>Search Tags: </b>{$item.tags}</p>
+        <div class="details-view" style="font-size:10px; display:none"></div>
+        <div class="edit-view" style="font-size:10px; display:none"></div>
+    </li>
+{/template}
+
+/**
+ * Renders a layerItem
+ * @param item The list of items to be loaded
+ * each item should have an id, type (to ignore groups), name, tags, details
+ */
+{template .layerItem}
+    <li class="listitem" itemid="{$item.id}" itemtype="{$item.type}">
+        <div class="itemtitle">
+            {if $item.type == 'imagery'}
+                <input title="Click to select this layer as base layer" type="radio" id="toggle-{$item.type}-{$item.id}" name="imagerylayers" class="float-left" />
+            {else}
+                <input title="Click to turn this layer on/off" type="checkbox" id="toggle-{$item.type}-{$item.id}" class="float-left" />
+            {/if}
+            <label class="itemname" for="toggle-{$item.type}-{$item.id}">{$item.name}</label>
+        </div>
+        <div class="buttonset-layer showonselect hideonselect" style="display:none;">
+            <a title="Click to view searchable tags" class="ui-state-default ui-corner-all ui-button-text-only">Tags</a>
+            <a title="Click to view Layer Details" class="ui-state-default ui-corner-all ui-button-text-only">Detail</a>
+            {if $item.refreshable}
+                <a title="Click to refresh the Layer" class="ui-state-default ui-corner-all ui-button-text-only">Refresh</a>
+            {/if}
+            {if $item.type == 'point' or $item.type == 'line' or $item.type == 'polygon'}
+                <button title="Inspect features" role="button" class="ui-button ui-widget ui-corner-all ui-state-default ui-button-text-only inspect-features">
+                    <span class="ui-button-icon-primary ui-icon gisicon-inspect gis-icon"></span>
+                </button>
+            {/if}
+            <span class="float-right latest_data">{$item.latest_data}</span>
+            <span style="position: relative; font-size: 7px; font-weight: bold; float: left; width: 95%; top: 2px; text-align: center;">
+                <span style="float: left;">&nbsp;0</span>
+                Opacity %
+                <span style="float: right;">100&nbsp;</span>
+            </span>
+        </div>
+        <div id="slider-{$item.type}-{$item.id}" class="showonselect hideonselect" style="display:none;"></div>
+        <p class="tags hideonselect" style="display:none"><b>Search Tags: </b>id:{$item.id}, type:{$item.type}, {$item.tags}</p>
+        <a href="{$item.legend}" target="_blank"><img class="legend-layer hideonselect contain float-right" style="display:none;" src="{$item.legend}"/></a>
+        <div class="details-layer hideonselect" style="font-size:10px; display:none"></div>
+    </li>
+{/template}
+
+/**
+ * Renders a vectorItem
+ * @param id The id of the feature being rendered
+ * @param attributes The attributes of the feature being rendered
+ * @param searchtags The atrributes made into searchtags
+ */
+{template .vectorItem}
+    <li class="listitem" featureid="{$id}">
+        <div class="itemtitle">
+            <input title="Click to select/unselect this vector" type="checkbox" id="toggle-{$id}" class="float-left" />
+            {if $attributes.name}
+                {if $attributes.callsign}
+                    <label class="itemname" for="toggle-{$id}">{$attributes.callsign} - {$attributes.name}</label>
+                {else}
+                    <label class="itemname" for="toggle-{$id}">{$attributes.name}</label>
+                {/if}
+            {elseif $attributes.deviceid}
+                <label class="itemname" for="toggle-{$id}">{$attributes.deviceid}</label>
+            {/if}
+        </div>
+        <div class="buttonset-vector">
+            <a title="Click to view searchable tags" class="tags ui-state-default ui-corner-all ui-button-text-only">Tags</a>
+            <a title="Click to view Device Details" class="details ui-state-default ui-corner-all ui-button-text-only">Detail</a>
+            {if $attributes.age <= 1}
+                <span style="color:#008800"><b> Updated: </b></span><span class="latest_data">{$attributes.logged_time_str}</span>
+            {elseif $attributes.age <= 3}
+                <span style="color:#CCCC00"><b> Updated: </b></span><span class="latest_data">{$attributes.logged_time_str}</span>
+            {elseif $attributes.age > 3}
+                <span style="color:#CC0000"><b> Updated: </b></span><span class="latest_data">{$attributes.logged_time_str}</span>
+            {else}
+                <b> Updated: </b><span class="latest_data">{$attributes.age} - {$attributes.logged_time_str}</span>
+            {/if}
+        </div>
+        <p class="tags" style="display:none"><b>Search Tags: </b>{$searchtags}</p>
+        <div class="details-vector" style="font-size:10px; display:none"></div>
+        <div class="edit-vector" style="font-size:10px; display:none"></div>
+    </li>
+{/template}
+
+
+/**
+ * Renders the list of tags from a set of items (items with type group)
+ * @param items The list of items to be loaded
+ * each item should have an id, type (to include groups), name
+ */
+{template .listTags}
+    {foreach $item in $items}
+        <li class="listitem">
+            <a searchid="{$item.id}">{$item.name}</a>
+        </li>
+    {/foreach}
+{/template}
+

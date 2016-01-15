@@ -1,0 +1,334 @@
+#openlogo {
+    background-image: url(/media/img/fmsopenlogo.png);
+    width: 195px;
+    height: 16px;
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    border-right: none;
+    border-bottom: none;
+    background-color: #DDDDDD;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 5px 0 0 5px;
+}
+
+#declogo {
+    background-image: url(/media/img/declogo.png);
+    width: 203px;
+    height: 48px;
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    border-left: none;
+    border-bottom: none;
+    background-color: #DDDDDD;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 5px 5px 0 0;
+}
+
+#mouseposition {
+    position: absolute;
+    left: 29px;
+    top: 0px;
+    color: #000000;
+    background-color: #DDDDDD;
+    font-size: 12px;
+    padding: 3px;
+    border-top: none;
+    border-left: none;
+}
+
+#mouseposition span{
+    font-size: 10px;
+}
+
+input#scaletext {
+    background: #E6E6E6;
+    width: 4em;
+    position: relative;
+    top: -1px;
+}
+
+span#messagetext{
+    padding-right: 1em;
+    background-color: #ffc129;
+    font-weight: bold;
+}
+
+div#overviewmapdiv {
+    overflow: hidden;
+}
+
+div#hoverdetails {
+    padding: 4px;
+    position: absolute;
+    width: 355px;
+    height: auto;
+    display: none;
+    background-color: #FFFFFF;
+    z-index: 1250;
+    overflow: visible;
+}
+
+div.slider-ui-zoom.mapwidgets {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 28px;
+    height: 222px;
+    border-left: none;
+    border-top: none;
+}
+
+div.slider-ui-zoom.mapwidgets.background {
+    background-color: #DDDDDD;
+    border-left: none;
+    border-top: none;
+}
+
+div.slider-ui-zoom div.slider {
+    position: absolute;
+    left: 9px;
+    top: 30px;
+    height: 160px;
+}
+
+div.slider-ui-zoom div.gisicon-zoomin {
+    position: absolute;
+    left: 3px;
+    top: 3px;
+    width: 20px;
+    height: 20px;
+}
+
+div.slider-ui-zoom div.gisicon-zoomout {
+    position: absolute;
+    left: 3px;
+    top: 197px;
+    width: 20px;
+    height: 20px;
+}
+
+div.slider-ui-zoom div.slider a.ui-slider-handle {
+    border: solid 1px #666666;
+}
+
+div.mapwidgets {
+    border: solid 1px #666666;
+}
+
+div#mainToolbar {
+    overflow: visible;
+    z-index: 2000;
+    background-color: #DDDDDD;
+}
+
+div.vectors-select select#vectors-select {
+    height: 26px;
+    margin-left: -8px;
+    padding-top: 4px;
+}
+
+label.itemname {
+    width: 90%;
+    font-size: 10px;
+    font-weight: bold;
+    margin-left: 0.5em;
+}
+
+li.listitem div.itemtitle span.latest_data {
+    font-size: 10px;
+}
+
+li.listitem {
+    padding: 0.4em 1em 0.4em 1em;
+    border-bottom: 1px solid #ccc;
+    overflow: hidden;
+}
+
+li.view-immutable {
+    background-color: #EFEFEF;
+}
+
+ul li.listitem {
+    display: block;
+}
+
+ul.ui-sortable li {
+    line-height: 16px;
+}
+
+div#contents div.listtags li.listitem {
+    padding: 0px;
+    border: none;
+}
+
+div#contents div.listtags {
+    padding-left: 2px;
+}
+
+div#contents div.contentsearchlabel {
+    margin: 8px 4px 4px 4px;
+    vertical-align: bottom;
+    float: left;
+}
+
+div#contents input.searchtextbox {
+    width: 80%;
+    margin: 3px;
+}
+
+li.listitem .ui-slider {
+    display: block;
+    width: 95%;
+    margin-top: 0.5em;
+    opacity: 0.8;
+}
+
+li.listitem div.buttonset-layer,
+li.listitem div.buttonset-vector,
+li.listitem div.buttonset-view {
+    display: block;
+    margin-top: 0.5em;
+    font-size: 10px;
+}
+
+li.loading-tiles {
+    background-color: #FFDCA8;
+}
+
+li.loaded-tiles {
+    background-color: #BAE094;
+}
+
+li.broken-tiles {
+    background-color: #F2A0A0;
+}
+
+.contain {
+  object-fit: scale-down;
+  max-width: 100%;
+}
+
+div#views-div-center div#buttonset-viewstab {
+    height: 25px;
+}
+
+div#views-div-north a.addview,
+div#layers-div-north a.addlayer {
+    padding: 2px, 5px, 5px, 5px;
+    margin-left: 5px
+}
+
+div.buttonset-view a,
+div.buttonset-layer a,
+div.buttonset-vector a,
+div.buttonset-history a {
+    padding: 0.2em 0.5em 0.2em 0.5em;
+}
+
+div#history-div-west {
+    width: 100px
+}
+
+.clear-both {
+    clear: both;
+}
+
+#aboutdialog a {
+    color: #0000aa;
+}
+
+ul.list {
+    padding: 0;
+    margin: 0;
+}
+
+.list li {
+    list-style: none;
+}
+
+p.tags {
+    font-size: 9px;
+    font-style: italic;
+    margin-bottom: 0.2em;
+}
+
+#contentstabs {
+    padding: 2px 4px;
+}
+
+#contents .ui-layout-center .ui-layout-center ul {
+    padding: 0.2em;
+}
+
+.ui-layout-pane {
+    padding: 0px;
+}
+
+.ui-widget .gis-icon.ui-icon { width: 16px; height: 16px; background-image: url(img/qgistoolbar16x16.png); }
+
+.gisicon-inspect { background-position: -144px 0; }
+.gisicon-pan { background-position: -288px 0; }
+.gisicon-select { background-position: -336px 0; }
+.gisicon-deselect { background-position: 0px 0; }
+.gisicon-zoomin { background-position: -400px 0; }
+.gisicon-zoomout { background-position: -448px 0; }
+.gisicon-zoomselect { background-position: -480px 0; }
+.gisicon-zoomdefault { background-position: -384px 0; }
+.gisicon-prevview { background-position: -416px 0; }
+.gisicon-nextview { background-position: -432px 0; }
+.gisicon-mline { background-position: -208px 0; }
+.gisicon-marea { background-position: -192px 0; }
+.gisicon-new { background-position: -96px 0; }
+.gisicon-newview { background-position: -240px 0; }
+.gisicon-quickpdf { background-position: -304px 0; }
+.gisicon-quickjpg { background-position: -320px 0; }
+.gisicon-drawpoint { background-position: -528px 0; }
+.gisicon-drawline { background-position: -512px 0; }
+.gisicon-drawpoly { background-position: -544px 0; }
+.gisicon-draweditvector { background-position: -256px 0; }
+.gisicon-drawdelvector { background-position: -16px 0; }
+.gisicon-drawsavevector { background-position: -128px 0; }
+
+#map {
+    width: 99.9%;
+    height: 99.9%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+.abovemap {
+    z-index: 1000;
+}
+
+div#mainToolbar {
+    position: relative;
+    top: 0px;
+    left: 0px;
+}
+
+.loading {
+    opacity: .7; filter:Alpha(Opacity=70);
+    background: #FFC129;
+    color: black;
+    font-weight: bold;
+    padding: 3px;
+}
+
+.loading-error {
+    color: #FFF;
+    background: red;
+}
+
+.olImageLoadError {
+    /* when OL encounters a 404, don't display the pink image */
+    display: none !important;
+}
+
+a {
+    cursor: pointer;
+}

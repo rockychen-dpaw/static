@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="64"
+   height="64"
+   viewBox="0 0 63.999996 63.999996"
+   id="svg5682"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="person.svg">
+  <defs
+     id="defs5684" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="2.8284271"
+     inkscape:cx="-29.631194"
+     inkscape:cy="12.400894"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     showguides="false"
+     inkscape:window-width="1564"
+     inkscape:window-height="913"
+     inkscape:window-x="190"
+     inkscape:window-y="124"
+     inkscape:window-maximized="0"
+     units="px" />
+  <metadata
+     id="metadata5687">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-358.21426,-747.29078)">
+    <path
+       style="fill:#003862;fill-opacity:1;stroke:none;stroke-width:2;stroke-miterlimit:10;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       d="M 32 10 A 13.000002 13.000002 0 0 0 19 23 A 13.000002 13.000002 0 0 0 26.527344 34.775391 C 18.145462 37.157848 12 44.854272 12 54 L 14 54 C 14 44.058869 22.058869 36 32 36 C 41.941131 36 50 44.058869 50 54 L 52 54 C 52 44.854272 45.854538 37.157848 37.472656 34.775391 A 13.000002 13.000002 0 0 0 45 23 A 13.000002 13.000002 0 0 0 32 10 z M 32 12 A 11.000001 11.000001 0 0 1 43 23 A 11.000001 11.000001 0 0 1 32 34 A 11.000001 11.000001 0 0 1 21 23 A 11.000001 11.000001 0 0 1 32 12 z "
+       id="path4421"
+       transform="translate(358.21426,747.29078)" />
+  </g>
+</svg>

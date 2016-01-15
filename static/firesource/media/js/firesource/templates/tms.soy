@@ -1,0 +1,13 @@
+/**
+ * Renders the code for a wms open lyr
+ * @param id
+ * @param url
+ * @param layers
+ * @param transparent
+ */
+{template .ollayertms autoescape="false"}
+    new OpenLayers.Layer.TMS("{$id}", "{$url}", {lb}
+        layername:"{$layers}@gda94@{if $transparent}png{else}jpeg{/if}",
+        type:"{if $transparent}png{else}jpeg{/if}"
+    {rb} );
+{/template}

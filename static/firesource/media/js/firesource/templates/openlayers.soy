@@ -1,0 +1,16 @@
+/**
+ * Renders the code for a wms open lyr
+ * @param id
+ * @param url
+ * @param layers
+ * @param transparent
+ */
+{template .ollayerwms autoescape="false"}
+    new OpenLayers.Layer.WMS("{$id}", "{$url}", {lb}
+        layers:"{$layers}",
+        tiled:true,
+        transparent:{$transparent}
+    {rb}, {lb}
+        buffer:0
+    {rb} );
+{/template}

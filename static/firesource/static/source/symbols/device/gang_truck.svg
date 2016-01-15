@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   id="svg2"
+   sodipodi:version="0.32"
+   inkscape:version="0.46"
+   width="64"
+   height="64"
+   version="1.0"
+   sodipodi:docname="gang_truck.svg"
+   inkscape:output_extension="org.inkscape.output.svg.inkscape">
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs5">
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="0 : 526.18109 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_z="744.09448 : 526.18109 : 1"
+       inkscape:persp3d-origin="372.04724 : 350.78739 : 1"
+       id="perspective9" />
+  </defs>
+  <sodipodi:namedview
+     inkscape:window-height="1147"
+     inkscape:window-width="1920"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     guidetolerance="10.0"
+     gridtolerance="10.0"
+     objecttolerance="10.0"
+     borderopacity="1.0"
+     bordercolor="#666666"
+     pagecolor="#ffffff"
+     id="base"
+     showgrid="false"
+     inkscape:zoom="10.076272"
+     inkscape:cx="33.211843"
+     inkscape:cy="25.082444"
+     inkscape:window-x="-4"
+     inkscape:window-y="-4"
+     inkscape:current-layer="layer2" />
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="circle" />
+  <g
+     inkscape:groupmode="layer"
+     id="layer1"
+     inkscape:label="symbol">
+    <path
+       style="fill:#000000"
+       d="M 10.55,41.559036 C 8.5607487,40.555393 8.2179214,36.51749 10.009756,35.195904 C 11.044175,34.43296 14.00878,34.556289 15.058024,35.405914 C 15.61296,35.855275 16.040654,36.785661 16.184176,37.855696 C 16.389172,39.384067 16.272392,39.724146 15.160888,40.835652 C 13.793147,42.203391 12.293467,42.438671 10.55,41.559036 z M 45.236218,41.800934 C 44.13966,41.589125 42.65546,39.822304 42.65546,38.728749 C 42.65546,38.299238 42.918501,37.318277 43.239994,36.548837 C 43.683564,35.487224 44.188316,35.049406 45.333065,34.733326 C 47.168315,34.226589 48.412649,34.638909 49.598751,36.146793 C 50.63852,37.468646 50.718434,38.868081 49.83145,40.221792 C 49.273729,41.072981 47.13838,42.201344 46.401419,42.034292 C 46.265411,42.003462 45.741072,41.898453 45.236218,41.800934 z M 26.807728,37.959056 L 17.751534,37.959056 L 16.929125,36.456475 C 14.616161,32.230584 10.181629,32.233763 7.8745461,36.462966 C 6.4155151,39.137572 6.0192593,38.459603 6.0513939,33.343666 C 6.0781414,29.085444 6.1861989,28.466201 7.3951281,25.643146 C 8.4056165,23.283485 8.9464614,22.507328 9.7327893,22.288407 C 10.295448,22.131757 13.858304,21.985128 17.650247,21.962561 L 24.544688,21.921531 L 24.544688,28.032842 L 24.544688,34.144153 L 34.250781,34.144153 C 39.589131,34.272475 42.387668,34.049762 42.482059,34.144153 C 42.576451,34.238545 42.329939,35.724302 41.934255,36.665757 L 41.214832,37.959056 L 37.716159,37.959056 C 35.79189,37.90932 31.788634,38.024391 26.807728,37.959056 z M 51.112713,36.365871 L 50.050546,34.269785 L 54.000465,34.269785 L 57.950382,34.269785 L 57.66347,35.607514 C 57.271829,37.433533 55.873966,37.789796 55.522773,37.749898 C 55.323999,37.727315 53.131512,37.741679 53.074785,37.749898 C 52.873744,37.779029 51.889061,37.232168 51.112713,36.365871 z M 26.191123,30.359505 L 26.191123,27.272441 L 29.460649,27.272441 C 32.280427,27.272441 32.810741,27.157422 33.31584,26.436292 C 34.176074,25.208136 34.489735,24.80279 39.568397,24.80279 C 44.647061,24.80279 46.607153,25.208136 47.46739,26.436292 C 47.944362,27.117265 48.507043,27.272441 50.49936,27.272441 L 52.945673,27.272441 L 52.945673,28.918874 C 52.945673,30.565309 52.945673,30.565309 54.592106,30.565309 C 56.199338,30.565309 56.23854,30.599609 56.23854,32.005939 L 56.23854,33.446568 L 40.391615,33.446568 L 26.191123,33.446568 L 26.191123,30.359505 z"
+       id="path2384"
+       sodipodi:nodetypes="cssssccssssssccccsssscccccscccccccccssccccssscccsccccc" />
+  </g>
+</svg>

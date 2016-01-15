@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="64px"
+   height="64px"
+   id="svg3246"
+   version="1.1"
+   inkscape:version="0.47 r22583"
+   sodipodi:docname="New document 4">
+  <defs
+     id="defs3248">
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="0 : 32 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_z="64 : 32 : 1"
+       inkscape:persp3d-origin="32 : 21.333333 : 1"
+       id="perspective3254" />
+    <inkscape:perspective
+       id="perspective3238"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <filter
+       id="filter3271"
+       inkscape:label="Desaturate"
+       x="0"
+       y="0"
+       width="1"
+       height="1"
+       inkscape:menu="Color"
+       inkscape:menu-tooltip="Render in shades of gray by reducing saturation to zero"
+       color-interpolation-filters="sRGB">
+      <feColorMatrix
+         id="feColorMatrix3273"
+         type="saturate"
+         values="0" />
+    </filter>
+    <filter
+       id="filter3275"
+       inkscape:label="Desaturate"
+       x="0"
+       y="0"
+       width="1"
+       height="1"
+       inkscape:menu="Color"
+       inkscape:menu-tooltip="Render in shades of gray by reducing saturation to zero"
+       color-interpolation-filters="sRGB">
+      <feColorMatrix
+         id="feColorMatrix3277"
+         type="saturate"
+         values="0" />
+    </filter>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.9445436"
+     inkscape:cx="-98.762717"
+     inkscape:cy="33.384141"
+     inkscape:current-layer="layer1"
+     showgrid="true"
+     inkscape:document-units="px"
+     inkscape:grid-bbox="true"
+     inkscape:window-width="1680"
+     inkscape:window-height="1003"
+     inkscape:window-x="-4"
+     inkscape:window-y="-4"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata3251">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     id="layer1"
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer">
+    <g
+       id="g3281">
+      <g
+         style="filter:url(#filter3271)"
+         transform="matrix(0,-0.20525188,-0.20525188,0,64,32.000308)"
+         id="g2828">
+        <path
+           id="path2830"
+           style="fill:#f47421;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           d="m 0,0 c -86.101,0 -155.904,69.803 -155.904,155.909 0,86.104 69.803,155.903 155.904,155.903 86.107,0 155.907,-69.799 155.907,-155.903 C 155.907,69.803 86.107,0 0,0" />
+      </g>
+      <g
+         style="filter:url(#filter3275)"
+         transform="matrix(0,-0.20525188,-0.20525188,0,41.472552,17.041136)"
+         id="g2832">
+        <path
+           id="path2834"
+           style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           d="m 0,0 c -5.749,-9.955 -2.339,-22.681 7.613,-28.426 9.956,-5.748 22.681,-2.341 28.429,7.615 5.746,9.954 2.337,22.679 -7.619,28.427 C 18.471,13.362 5.746,9.953 0,0 z m -134.594,42.6 c 0,9.153 2.035,17.827 5.657,25.613 l -25.918,14.463 c -5.982,-12.081 -9.362,-25.682 -9.362,-40.076 0,-8.371 1.16,-16.465 3.29,-24.157 8.36,-1.361 16.065,-6.325 20.635,-14.239 4.561,-7.9 5.013,-17.043 2.022,-24.957 15.134,-15.391 35.724,-25.406 58.654,-26.864 l 0.432,29.665 c -31.06,2.73 -55.41,28.787 -55.41,60.552 z m 121.606,0 c 0,-31.765 -24.355,-57.822 -55.411,-60.552 l 0.433,-29.665 c 22.928,1.46 43.518,11.475 58.651,26.868 -2.989,7.913 -2.536,17.055 2.026,24.956 4.568,7.913 12.272,12.876 20.633,14.237 2.128,7.691 3.289,15.785 3.289,24.156 0,14.394 -3.379,27.994 -9.363,40.074 L -18.645,68.212 c 3.622,-7.785 5.657,-16.459 5.657,-25.612 z m -60.803,60.802 c 20.571,0 38.74,-10.223 49.742,-25.854 L 1.443,92.765 c -12.171,18.215 -30.775,31.766 -52.567,37.394 -5.359,-6.575 -13.52,-10.776 -22.669,-10.776 -9.148,0 -17.309,4.202 -22.667,10.777 -21.793,-5.627 -40.397,-19.178 -52.568,-37.394 l 25.493,-15.218 c 11.001,15.631 29.17,25.854 49.744,25.854 z m -73.79,-103.405 c -5.748,9.956 -18.472,13.365 -28.424,7.618 -9.956,-5.748 -13.367,-18.472 -7.619,-28.428 5.747,-9.953 18.472,-13.363 28.427,-7.615 9.951,5.746 13.362,18.472 7.616,28.425 z m 94.602,148.617 c 0,11.498 -9.316,20.815 -20.814,20.815 -11.495,0 -20.812,-9.317 -20.812,-20.815 0,-11.494 9.317,-20.812 20.812,-20.812 11.498,0 20.814,9.318 20.814,20.812" />
+      </g>
+    </g>
+  </g>
+</svg>

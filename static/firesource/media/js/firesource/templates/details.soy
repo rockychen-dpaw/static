@@ -1,0 +1,54 @@
+/**
+ * Renders a layer detail div contents when detail button clicked
+ * @param item
+ */
+{template .layerdetaildiv autoescape="false"}
+    <div>
+        {if $item.details.updated}
+            <b>Updated:</b> {$item.details.updated}
+        {/if}
+        {if $item.details.source}
+            <br><b>Source:</b> {$item.details.source}
+        {/if}
+        {if $item.details.custodian}
+            <br><b>Custodian:</b> {$item.details.custodian}
+        {/if}
+        {if $item.details.positionalaccuracy}
+            <br><b>Positional Accuracy:</b> {$item.details.positionalaccuracy}
+        {/if}
+        {if $item.details.scaledependancy}
+            <br><b>Scale Dependancy:</b> {$item.details.scaledependancy}
+        {/if}
+        {if $item.details.labels}
+            <br><b>Labels:</b> {$item.details.labels}
+        {/if}
+        {if $item.details.labelscaledependancy}
+            <br><b>Label Scale Dependancy:</b> {$item.details.labelscaledependancy}
+        {/if}
+        {if $item.details.description}
+            <br><b>Description:</b> {$item.details.description}
+        {/if}
+        {if $item.details.metadata}
+            <br><b>Metadata:</b> {$item.details.metadata}
+        {/if}
+    </div>
+{/template}
+
+/**
+ * Renders a resources detail div contents when detail button clicked
+ * @param item
+ */
+{template .resourcedetaildiv}
+    <div class="float-left" style="padding-top: 5px; width: 77%;">
+        <b>{$item.callsign}</b> - {$item.name}<br>
+        <b>Device ID:</b> {$item.deviceid}<br>
+        <b>Last Logged:</b> {$item.logged_time_str}<br>
+        <b>Heading: </b>{$item.heading}<br>
+    </div>
+    <div class="float-right" style="width: 65px;">
+        <p align="center" style="font-size:10px; line-height:10px;">
+            <img width=50% src="//static.dpaw.wa.gov.au/static/firesource/static/build/symbols/{$item.symbol}_64.png"><br>
+            {$item.symboltext}
+        </p>
+    </div>
+{/template}

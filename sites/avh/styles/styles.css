@@ -1,0 +1,85 @@
+@charset "UTF-8";
+
+body {
+	background-color: #77A734;
+	font-family: "Trebuchet MS", arial, helvetica, sans-serif;
+	font-size: 12pt;
+	margin: 0;
+	padding: 0;
+}
+
+#header {
+	background-color: #77A734;
+	border-bottom: 4pt solid #3C5A13;
+	height: 150px;
+	padding: 1em 5em;
+}
+
+#state_logo {
+	position: absolute;
+	top: 1em;
+	right: 5em;
+}
+
+#state_logo_footer {
+    display: none;
+}
+
+#main {
+	background-color: white;
+	padding: 1em 5em;
+}
+
+h1 {
+	padding-top: 0;
+}
+
+a {
+	color: #4A65B4;
+}
+
+#nodelist {
+	list-style: none;
+	list-style-position: inside;
+	margin: 0 0 0 1em;
+	padding: 0 1em 0 0;
+	text-indent: -1em;
+}
+
+#nodelist li {
+	margin: 5pt 0 0 0;
+	padding: 0;
+}
+
+#nodelist li:before {
+	content: "\00BB";
+	padding-right: 5pt;
+}
+
+#nodelist li h3 {
+	display: inline;
+	font-weight: normal;
+}
+
+footer {
+	border-top: 4pt solid #3C5A13;
+	padding: 1em 5em;
+}
+
+@media screen and (max-width: 600px) {
+    #header {
+        padding: 1em 2em;
+    }
+    #state_logo {
+        display: none;
+    }
+    #main {
+        padding: 1em 2em;
+    }
+    #state_logo_footer {
+        display: block;
+    }
+    footer {
+	    padding: 1em 2em;
+    }
+}

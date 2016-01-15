@@ -1,0 +1,63 @@
+<a id="rocket" href="#top" class="show"></a><html><head><meta http-equiv="content-type" content="text/html; charset=utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"/><meta content="yes" name="apple-mobile-web-app-capable"/><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"/><meta content="telephone=no" name="format-detection"/><meta name="description"/><title>Brocket Relay | Brocket</title><link rel="stylesheet" type="text/css" href="/css/normalize.css"/><link rel="stylesheet" type="text/css" href="/css/pure-min.css"/><link rel="stylesheet" type="text/css" href="/css/grids-responsive-min.css"/><link rel="stylesheet" type="text/css" href="/css/style.css"/><link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico"/><link rel="apple-touch-icon" href="/apple-touch-icon.png"/><link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"/><link rel="alternate" type="application/atom+xml" href="/atom.xml"/></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">Brocket Relay</h1><a id="logo" href="/">Brocket</a><p class="description">Inter-app communication</p></div><div id="nav-menu"><a href="/"><i class="icon-home"> Home</i></a><a href="/archives"><i class="icon-archive"> Archive</i></a><a href="/" class="current"><i class="icon-about"> About</i></a><a href="/atom.xml"><i class="icon-rss"> RSS</i></a></div></div><div id="layout" class="pure-g"><div class="pure-u-1 pure-u-md-3-4"><div class="content_container"><div class="post"><h1 class="post-title">Brocket Relay</h1><div class="post-content"><p>We have:</p>
+<ul>
+<li><a href="#overview">Overview</a></li>
+<li><a href="#install">Installation</a></li>
+<li><a href="#usage">Usage</a></li>
+<li><a href="#development">Development</a></li>
+<li><a href="#testing">Testing</a></li>
+</ul>
+<p><a name="overview"></a></p>
+<h3 id="Overview">Overview</h3><p>The relay component does the opening and closing of websocket to the central brocket server, and the reception and dispatch of messages.</p>
+<h3 id="Installation">Installation</h3><p><a name="install"></a></p>
+<p>You can use this via component via script tag or npm package.</p>
+<p>The script is available on the static server at <a href="https://static.dpaw.wa.gov.au/static/brocket/lib/relay/dist/bundle.js" target="_blank" rel="external">brocket/lib/relay/dist</a></p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"https://static.dpaw.wa.gov.au/static/brocket/lib/relay/dist/bundle.min.js"</span>&gt;</span><span class="undefined"> </span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>This will expose the <code>Relay</code> object to the global scope.</p>
+<p>To include the relay in an npm package, first, install it:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm install --save dpaw-brocket-relay</span><br></pre></td></tr></table></figure>
+<p>then require in in your javascript file:</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> Relay = <span class="built_in">require</span>(<span class="string">'dpaw-brocket-relay'</span>);</span><br></pre></td></tr></table></figure>
+<p><a name="usage"></a></p>
+<h3 id="Usage">Usage</h3><p>Use use a relay, you will need to:</p>
+<ol>
+<li><a href="#create">Make a new linked object</a></li>
+<li><a href="#initialise">Initialise it</a></li>
+<li><a href="hook">Hook up event listeners</a></li>
+<li><a href="connect">Connect to the server and open the websockets</a></li>
+<li><a href="#dispatch">Receive and dispatch messages</a></li>
+</ol>
+<p><a name="create"></a></p>
+<h4 id="Make_a_new_object">Make a new object</h4><p>Before use, you will need to create a new linked object with <code>Object.create</code> following <a href="https://github.com/getify/You-Dont-Know-JS/blob/master/this%20&amp;%20object%20prototypes/ch6.md" target="_blank" rel="external">OLOO</a><br>and initialise with your relay options.</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> relay = <span class="built_in">Object</span>.create(Relay);</span><br></pre></td></tr></table></figure>
+<p><a name="initialise"></a></p>
+<h4 id="Initialise_it">Initialise it</h4><p>Many of these details will be taken care of by the oim auth process soon.</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> relayOpts = &#123;</span><br><span class="line">  baseAddr: <span class="string">"wss://brocket.dpaw.wa.gov.au"</span>,</span><br><span class="line">  channel: <span class="string">'dendrite'</span>,</span><br><span class="line">  appID: <span class="string">'prs'</span>,</span><br><span class="line">  userID: <span class="string">'&lt;username&gt;'</span></span><br><span class="line">&#125;;</span><br><span class="line">relay.init(relayOpts);</span><br></pre></td></tr></table></figure>
+<p><a name="hook-up"></a></p>
+<h4 id="Hook_up_listeners">Hook up listeners</h4><p>The relay exposes the <a href="https://nodejs.org/api/events.html#events_class_events_eventemitter" target="_blank" rel="external">EventEmitter</a> interface, which means you can hook listener function on in the same way as DOM elements and Websockets.<br>You may also subscribe to the relay for new messages in the same way you would listen to an reactive stream.<br>For the real experience, you should inject the Rx dependency, (Kefir coming soon).<br>You can then use the message stream <code>message$</code> as a full Observable object.</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">/* Event emitter interface */</span></span><br><span class="line">relay.on(<span class="string">'message'</span>,  msg =&gt; <span class="built_in">console</span>.log(<span class="string">'relay received msg'</span>, msg));</span><br><span class="line">relay.on(<span class="string">'dispatch'</span>, msg =&gt; <span class="built_in">console</span>.log(<span class="string">'relay dispatched msg'</span>, msg));</span><br><span class="line">relay.on(<span class="string">'error'</span>,    err =&gt; <span class="built_in">console</span>.warn(<span class="string">'relay failed'</span>, err));</span><br><span class="line"></span><br><span class="line"><span class="comment">/* Stream-like interface */</span></span><br><span class="line">relay.subscribe(msg =&gt; <span class="built_in">console</span>.log(<span class="string">'Subscriber received msg '</span>, msg));</span><br><span class="line"></span><br><span class="line"><span class="comment">/* Actual rx stream interface */</span></span><br><span class="line">relay.inject_rx(<span class="built_in">require</span>(<span class="string">'rx'</span>));</span><br><span class="line">relay.message$.subscribe(</span><br><span class="line">    msg =&gt; log(<span class="string">'received: '</span>, msg),</span><br><span class="line">    msg =&gt; log(<span class="string">'completed: '</span>, msg),</span><br><span class="line">    err =&gt; log(<span class="string">'error:'</span>, err)</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+<p>You can only send a message once the relay has connected to the server.<br>It’s best to connect listeners and subscribers before connection.</p>
+<p><a name="connect"></a></p>
+<h4 id="Connect_to_the_server">Connect to the server</h4><p>The relay doesn’t connect to the server until you are ready. This gives you a chance to listen for open and close events from the sockets, and makes the sequence of adding listeners less critical.</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">relay.connect()</span><br></pre></td></tr></table></figure>
+<p><a name="dispatch"></a></p>
+<h4 id="Dispatch_a_message">Dispatch a message</h4><p>Messages must be objects with tag and payload attributes, and be sent with the relay dispatch method.<br>The tag is entirely your choice, but should be understood by your other listeners.<br>I have been using <strong>application</strong>, <strong>context</strong>, <strong>operation</strong> with colon separators</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">/*         app:ctx:op */</span></span><br><span class="line"><span class="keyword">let</span> tag = <span class="string">'prs:map:transport'</span>;</span><br><span class="line"><span class="keyword">let</span> payload = &#123;extent: <span class="string">""</span>, layers: []&#125;;</span><br><span class="line"><span class="keyword">let</span> msg = &#123;tag, payload&#125;;  <span class="comment">// ES2015 equiv to &#123;tag: tag, payload: payload&#125;</span></span><br><span class="line">relay.dispatch(msg);</span><br></pre></td></tr></table></figure>
+<h3 id="Development">Development</h3><p><a name="development"></a></p>
+<p>If you need to hack on the relay code itself</p>
+<h3 id="Testing">Testing</h3><p><a name="testing"></a></p>
+<h3 id="Issues">Issues</h3></div></div></div></div><div class="pure-u-1-4"><div id="sidebar"><div class="widget"><div class="widget-title">Categories</div></div><div class="widget"><div class="widget-title">Tags</div><div class="tagcloud"></div></div><div class="widget"><div class="widget-title">Recent</div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2015/11/04/hello-world/">Hello World</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/11/04/welcome/">Welcome to Brocket</a></li></ul></div><div class="widget"><div class="widget-title">Blogroll</div><ul></ul><a href="/brocket/app" title="apps" target="_blank">apps</a><ul></ul><a href="/brocket/plugin" title="plugins" target="_blank">plugins</a><ul></ul><a href="/brocket/lib" title="libraries" target="_blank">libraries</a></div></div></div></div><div id="footer">© <a href="/" rel="nofollow">Brocket.</a> Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a><a rel="nofollow" target="_blank" href="https://github.com/tufu9441/maupassant-hexo"> Theme</a> by<a rel="nofollow" target="_blank" href="https://github.com/pagecho"> Cho.</a></div></div></body><script src="/js/jquery.min.js" type="text/javascript"></script>
+<script src="/js/totop.js" type="text/javascript"></script><script src="/js/fancybox.pack.js" type="text/javascript"></script><link rel="stylesheet" href="/css/jquery.fancybox.css" type="text/css"><script>$(document).ready(function() {
+  $("img").wrap(function() {
+    if ($(this).hasClass('nofancybox')) return;
+    return '<a href="' + $(this).attr("src") + '" rel="group" />'});
+});</script><script>$(document).ready(function() {
+  $("a[href$='.jpg'],a[href$='.png'],a[href$='.gif']").attr('rel', 'gallery').fancybox({
+   helpers : {
+   title: { type: 'inside'}
+   },
+   afterLoad: function(){
+   this.title = this.title + ' ' + $(this.element).find('img').attr('alt');
+   }
+ });
+});
+</script></html>

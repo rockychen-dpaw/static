@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="64px"
+   height="64px"
+   id="svg2421"
+   sodipodi:version="0.32"
+   inkscape:version="0.46"
+   sodipodi:docname="boat.svg"
+   inkscape:output_extension="org.inkscape.output.svg.inkscape">
+  <defs
+     id="defs2423">
+    <filter
+       inkscape:collect="always"
+       id="filter3818">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="1.7901436"
+         id="feGaussianBlur3820" />
+    </filter>
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="0 : 32 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_z="64 : 32 : 1"
+       inkscape:persp3d-origin="32 : 21.333333 : 1"
+       id="perspective2429" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="5.5"
+     inkscape:cx="9.0909091"
+     inkscape:cy="32"
+     inkscape:current-layer="layer1"
+     showgrid="true"
+     inkscape:document-units="px"
+     inkscape:grid-bbox="true"
+     inkscape:window-width="1920"
+     inkscape:window-height="1147"
+     inkscape:window-x="-4"
+     inkscape:window-y="-4" />
+  <metadata
+     id="metadata2426">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     id="layer1"
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer">
+    <path
+       id="path2383"
+       style="fill:#000000;filter:url(#filter3818)"
+       d="M 343.50052,351.5897 C 379.46093,339.70469 415.97427,323.8714 446.01713,302.2791 C 453.59817,296.83049 460.23241,292.56957 460.77719,292.8028 C 511.72237,223.13377 505.93931,239.82836 487.69247,235.49587 C 468.68181,235.58447 366.04865,241.37287 339.57053,246.11446 C 329.61073,233.72194 339.47973,256.55228 322.68107,223.77081 C 311.20375,201.01233 312.18932,201.64476 293.39451,173.19108 L 166.52208,195.03361 L 150.41443,275.03826 C 103.11801,277.95729 85.806239,279.71627 38.278927,280.87251 C 16.273323,321.32981 21.903414,310.87714 11.191782,352.44344 C 11.850036,354.15882 68.422043,352.00485 162.00781,352.2659 L 162.00781,352.4381 C 165.38117,352.43825 166.82165,352.4381 170.27803,352.4381 L 343.50052,351.5897 L 343.50052,351.5897 z M 201.46015,210.57474 L 273.33303,202.1432 L 303.09047,251.4661 L 200.50072,250.08029 C 199.79782,236.49926 202.59158,229.23378 201.46015,210.57474 z"
+       sodipodi:nodetypes="cscccccccccccccccccc"
+       transform="matrix(0.1056054,0,0,0.1309081,4.9650178,-2.448724)" />
+  </g>
+</svg>

@@ -1,0 +1,63 @@
+
+
+html, body {
+    /* background: blue; */
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+#app {
+    /* background: orange; */
+    min-height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+#map-container {
+    position: relative;
+    height: 100vh;
+}
+
+#map {
+    height: 99vh;
+}
+
+#admin {
+    background: white;
+    border-radius: 10px;
+    position: absolute;
+    top: 60px;
+    right: 60px;
+    z-index: 9999;
+    opacity: 0.8;
+}
+
+.log-container {
+    background: white;
+    position: absolute;
+    top: 150px;
+    right: 10px;
+    width: 200px:
+    height: 600px;
+    opacity: 0.8;
+}
+
+.positions-container {
+    background: white;
+    position: absolute;
+    top: 300px;
+    left: 10px;
+    width: 200px:
+    height: 600px;
+    opacity: 0.8;
+}
+.comms-grid {
+    height: 150px;
+    width: 150px;
+}
+.comms-button {
+    width: 50px;
+    height: 50px;
+}

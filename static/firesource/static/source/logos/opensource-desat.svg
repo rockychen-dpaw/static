@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generator: Adobe Illustrator 11.0, SVG Export Plug-In  -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="166.79639"
+   height="161.65283"
+   viewBox="-13.2803 -21.7788 166.79639 161.65283"
+   xml:space="preserve"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.47 r22583"
+   sodipodi:docname="Opensource.svg"><metadata
+   id="metadata36"><rdf:RDF><cc:Work
+       rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
+         rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title></dc:title></cc:Work></rdf:RDF></metadata><sodipodi:namedview
+   pagecolor="#ffffff"
+   bordercolor="#666666"
+   borderopacity="1"
+   objecttolerance="10"
+   gridtolerance="10"
+   guidetolerance="10"
+   inkscape:pageopacity="0"
+   inkscape:pageshadow="2"
+   inkscape:window-width="640"
+   inkscape:window-height="488"
+   id="namedview34"
+   showgrid="false"
+   inkscape:zoom="0.91119691"
+   inkscape:cx="83.839329"
+   inkscape:cy="53.93163"
+   inkscape:window-x="0"
+   inkscape:window-y="0"
+   inkscape:window-maximized="0"
+   inkscape:current-layer="svg2" />
+	<defs
+   id="defs4"><inkscape:perspective
+   sodipodi:type="inkscape:persp3d"
+   inkscape:vp_x="0 : 129.5 : 1"
+   inkscape:vp_y="0 : 1000 : 0"
+   inkscape:vp_z="288 : 129.5 : 1"
+   inkscape:persp3d-origin="144 : 86.333333 : 1"
+   id="perspective38" />
+	
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	<filter
+   id="filter2857"
+   inkscape:label="Desaturate"
+   x="0"
+   y="0"
+   width="1"
+   height="1"
+   inkscape:menu="Color"
+   inkscape:menu-tooltip="Render in shades of gray by reducing saturation to zero"
+   color-interpolation-filters="sRGB"><feColorMatrix
+     id="feColorMatrix2859"
+     type="saturate"
+     values="0" /></filter></defs>
+	<path
+   style="fill:#40aa54;stroke:#20552a;stroke-width:5;stroke-linejoin:round;filter:url(#filter2857)"
+   id="path8"
+   d="m 70.117649,-19.2788 c -44.678711,0 -80.897949,36.219238 -80.897949,80.898437 0,34.679203 21.827637,64.251463 52.490239,75.754393 l 18.64257,-49.71387 c -10.54004,-3.95361 -18.04345,-14.119624 -18.04345,-26.040523 0,-15.358398 12.45068,-27.809082 27.80859,-27.809082 15.3584,0 27.80957,12.450684 27.80957,27.809082 0,11.920899 -7.50391,22.086913 -18.04394,26.040523 l 18.64257,49.71387 C 129.18796,125.8711 151.01609,96.29884 151.01609,61.619637 c 0,-44.679199 -36.21875,-80.898437 -80.898441,-80.898437 z" />
+</svg>

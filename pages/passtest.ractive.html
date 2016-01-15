@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Parks and Wildlife - Password Strength Test</title>
+
+    <script type="text/javascript" src="//static.dpaw.wa.gov.au/static/libs/ractive.js/0.3.7/ractive.min.js"></script>
+    <script type="text/javascript">
+
+    test_passwords = 'SmellyE1k1516\nFashionP0tato3473.12';
+
+    results_tmpl = '{{#results}}<table class="result"><tr><td>Password: </td><th>{{password}}</th><td rowspan="0">matches{{& match_sequence_display}}</td></tr><tr><td>strong:</td><td><strong>{{acceptable}} - {{score}}/4</strong></td></tr><tr><td>entropy: </td><td>{{entropy}}</td></tr>{{#composition}}{{#errors.length}}<tr><td>hints: </td><td>{{#errors}}{{.}}<br>{{/errors}}</td></tr>{{/errors.length}}{{/composition}}<tr><td>crack time: </td><td>{{crack_time_display}}</td></tr><tr></tr></table>{{/results}}';
+
+    props_tmpl = '<div class="match-sequence">{{#match_sequence}}<table><tr><th colspan="2">\'{{token}}\'</th></tr><tr><td>pattern:</td><td>{{pattern}}</td></tr><tr><td>entropy:</td><td>{{entropy}}</td></tr>{{#cardinality}}<tr><td>cardinality:</td><td>{{cardinality}}</td></tr>{{/cardinality}}{{#rank}}<tr><td>dict-name:</td><td>{{dictionary_name}}</td></tr><tr><td>rank:</td><td>{{rank}}</td></tr><tr><td>base-entropy:</td><td>{{base_entropy}}</td></tr><tr><td>upper-entropy:</td><td>{{uppercase_entropy}}</td></tr>{{/rank}}{{#l33t}}<tr><td>substitution-entropy:</td><td>{{l33t_entropy}}</td></tr><tr><td>substitutions:</td><td>{{sub_display}}</td></tr><tr><td>un-substituted:</td><td>{{matched_word}}</td></tr>{{/l33t}}{{#graph}}<tr><td>graph: </td><td>{{graph}}</td></tr><tr><td>turns: </td><td>{{turns}}</td></tr><tr><td>shifted keys: </td><td>{{shifted_count}}</td></tr>{{/graph}}{{#repeated_char}}<tr><td>repeat-char:</td><td>\'{{repeated_char}}\'</td></tr>{{/repeated_char}}{{#sequence_name}}<tr><td>sequence-name:</td><td>{{sequence_name}}</td></tr><tr><td>sequence-size</td><td>{{sequence_space}}</td></tr><tr><td>ascending:</td><td>{{ascending}}</td></tr>{{/sequence_name}}{{#day}}<tr><td>day:</td><td>{{day}}</td></tr><tr><td>month:</td><td>{{month}}</td></tr><tr><td>year:</td><td>{{year}}</td></tr><tr><td>separator:</td><td>\'{{separator}}\'</td></tr>{{/day}}</table>{{/match_sequence}}</div>';
+
+    var zxcvbn_load_hook = function() {
+        r = zxcvbn(password);
+    };
+
+    var test_composition = function(value, desc) {
+      var hints, result;
+      result = {
+        valid: true,
+        hints: [],
+        message: "ok"
+      };
+      if (!value.length) {
+        result = {
+          valid: false,
+          hints: ["Password is empty."],
+        };
+      } else {
+        hints = [];
+        if (value.length < 12) {
+          hints.push("Password is too short.");
+        }
+        if (/^ /.test(value) || /[ ]$/.test(value)) {
+          hints.push("Password can't start or end with space.");
+        }
+        if (!/\d/.test(value)) {
+          hints.push("Password should contain a number.");
+        }
+        if (!/[A-Z]/.test(value)) {
+          hints.push("Password should contain an uppercase letter.");
+        }
+        if (!/[a-z]/.test(value)) {
+          hints.push("Password should contain a lowercase letter.");
+        }
+        if (!/[\.\!\?\,\;\:\(\)\[\]\{\}\<\>\-\+\*\/\%\^\=\_\@\#\$\&\^\~\" ]/.test(value)) {
+          hints.push("Password should contain a special character.");
+        }
+        if (/[\|\\\'\`]/.test(value)) {
+          hints.push("Password should not contain | \\ \' or `");
+        }
+        if (hints.length > 0) {
+          result = {
+            hints: hints,
+          };
+        }
+        if (result.hints.length > 2) { result.hints.valid = false; }
+      }
+      return result;
+    };
+    </script>
+    <script type="text/javascript" src="//static.dpaw.wa.gov.au/static/libs/zxcvbn/2.0.2/zxcvbn.min.js" charset="utf-8">
+    </script>
+  </head>
+  <body>
+    <style type="text/css">
+      .result {
+        font-family: monospace;
+        border: 0.5px solid #ccc;
+      }
+      .match-sequence table {
+        float: left;
+        border-left: 0.5px solid #ccc;
+      }
+    </style>
+    <script id='template' type='text/ractive'>
+    <table class="result">
+        <tbody>
+            <tr>
+                <td>Password:</td>
+
+                <th>SmellyE1k1516</th>
+
+                <td rowspan="0">
+                    matches
+
+                    <div class="match-sequence">
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <th colspan="2">'Smelly'</th>
+                                </tr>
+
+                                <tr>
+                                    <td>pattern:</td>
+
+                                    <td>dictionary</td>
+                                </tr>
+
+                                <tr>
+                                    <td>entropy:</td>
+
+                                    <td>12.256208688527387</td>
+                                </tr>
+
+                                <tr>
+                                    <td>dict-name:</td>
+
+                                    <td>passwords</td>
+                                </tr>
+
+                                <tr>
+                                    <td>rank:</td>
+
+                                    <td>2446</td>
+                                </tr>
+
+                                <tr>
+                                    <td>base-entropy:</td>
+
+                                    <td>11.256208688527387</td>
+                                </tr>
+
+                                <tr>
+                                    <td>upper-entropy:</td>
+
+                                    <td>1</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <th colspan="2">'E'</th>
+                                </tr>
+
+                                <tr>
+                                    <td>pattern:</td>
+
+                                    <td>bruteforce</td>
+                                </tr>
+
+                                <tr>
+                                    <td>entropy:</td>
+
+                                    <td>5.954196310386876</td>
+                                </tr>
+
+                                <tr>
+                                    <td>cardinality:</td>
+
+                                    <td>62</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <th colspan="2">'1'</th>
+                                </tr>
+
+                                <tr>
+                                    <td>pattern:</td>
+
+                                    <td>dictionary</td>
+                                </tr>
+
+                                <tr>
+                                    <td>entropy:</td>
+
+                                    <td>2</td>
+                                </tr>
+
+                                <tr>
+                                    <td>dict-name:</td>
+
+                                    <td>english</td>
+                                </tr>
+
+                                <tr>
+                                    <td>rank:</td>
+
+                                    <td>2</td>
+                                </tr>
+
+                                <tr>
+                                    <td>base-entropy:</td>
+
+                                    <td>1</td>
+                                </tr>
+
+                                <tr>
+                                    <td>upper-entropy:</td>
+
+                                    <td>0</td>
+                                </tr>
+
+                                <tr>
+                                    <td>substitution-entropy:</td>
+
+                                    <td>1</td>
+                                </tr>
+
+                                <tr>
+                                    <td>substitutions:</td>
+
+                                    <td>1 -&gt; i</td>
+                                </tr>
+
+                                <tr>
+                                    <td>un-substituted:</td>
+
+                                    <td>i</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <th colspan="2">'k'</th>
+                                </tr>
+
+                                <tr>
+                                    <td>pattern:</td>
+
+                                    <td>bruteforce</td>
+                                </tr>
+
+                                <tr>
+                                    <td>entropy:</td>
+
+                                    <td>5.954196310386876</td>
+                                </tr>
+
+                                <tr>
+                                    <td>cardinality:</td>
+
+                                    <td>62</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <th colspan="2">'15'</th>
+                                </tr>
+
+                                <tr>
+                                    <td>pattern:</td>
+
+                                    <td>dictionary</td>
+                                </tr>
+
+                                <tr>
+                                    <td>entropy:</td>
+
+                                    <td>4.584962500721156</td>
+                                </tr>
+
+                                <tr>
+                                    <td>dict-name:</td>
+
+                                    <td>english</td>
+                                </tr>
+
+                                <tr>
+                                    <td>rank:</td>
+
+                                    <td>12</td>
+                                </tr>
+
+                                <tr>
+                                    <td>base-entropy:</td>
+
+                                    <td>3.5849625007211565</td>
+                                </tr>
+
+                                <tr>
+                                    <td>upper-entropy:</td>
+
+                                    <td>0</td>
+                                </tr>
+
+                                <tr>
+                                    <td>substitution-entropy:</td>
+
+                                    <td>1</td>
+                                </tr>
+
+                                <tr>
+                                    <td>substitutions:</td>
+
+                                    <td>1 -&gt; i, 5 -&gt; s</td>
+                                </tr>
+
+                                <tr>
+                                    <td>un-substituted:</td>
+
+                                    <td>is</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <th colspan="2">'1'</th>
+                                </tr>
+
+                                <tr>
+                                    <td>pattern:</td>
+
+                                    <td>dictionary</td>
+                                </tr>
+
+                                <tr>
+                                    <td>entropy:</td>
+
+                                    <td>2</td>
+                                </tr>
+
+                                <tr>
+                                    <td>dict-name:</td>
+
+                                    <td>english</td>
+                                </tr>
+
+                                <tr>
+                                    <td>rank:</td>
+
+                                    <td>2</td>
+                                </tr>
+
+                                <tr>
+                                    <td>base-entropy:</td>
+
+                                    <td>1</td>
+                                </tr>
+
+                                <tr>
+                                    <td>upper-entropy:</td>
+
+                                    <td>0</td>
+                                </tr>
+
+                                <tr>
+                                    <td>substitution-entropy:</td>
+
+                                    <td>1</td>
+                                </tr>
+
+                                <tr>
+                                    <td>substitutions:</td>
+
+                                    <td>1 -&gt; i</td>
+                                </tr>
+
+                                <tr>
+                                    <td>un-substituted:</td>
+
+                                    <td>i</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <th colspan="2">'6'</th>
+                                </tr>
+
+                                <tr>
+                                    <td>pattern:</td>
+
+                                    <td>bruteforce</td>
+                                </tr>
+
+                                <tr>
+                                    <td>entropy:</td>
+
+                                    <td>5.954196310386876</td>
+                                </tr>
+
+                                <tr>
+                                    <td>cardinality:</td>
+
+                                    <td>62</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </td>
+            </tr>
+
+            <tr>
+                <td>strong:</td>
+
+                <td><strong>no - 3/4</strong></td>
+            </tr>
+
+            <tr>
+                <td>entropy:</td>
+
+                <td>38.704</td>
+            </tr>
+
+            <tr>
+                <td>hints:</td>
+
+                <td>Password should contain a special character.<br></td>
+            </tr>
+
+            <tr>
+                <td>crack time:</td>
+
+                <td>10 months</td>
+            </tr>
+
+            <tr>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <table class="result">
+        <tbody>
+            <tr>
+                <td>Password:</td>
+
+                <th>FashionP0tato3473.12</th>
+
+                <td rowspan="0">
+                    matches
+
+                    <div class="match-sequence">
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <th colspan="2">'Fashion'</th>
+                                </tr>
+
+                                <tr>
+                                    <td>pattern:</td>
+
+                                    <td>dictionary</td>
+                                </tr>
+
+                                <tr>
+                                    <td>entropy:</td>
+
+                                    <td>11.782179193831208</td>
+                                </tr>
+
+                                <tr>
+                                    <td>dict-name:</td>
+
+                                    <td>english</td>
+                                </tr>
+
+                                <tr>
+                                    <td>rank:</td>
+
+                                    <td>1761</td>
+                                </tr>
+
+                                <tr>
+                                    <td>base-entropy:</td>
+
+                                    <td>10.782179193831208</td>
+                                </tr>
+
+                                <tr>
+                                    <td>upper-entropy:</td>
+
+                                    <td>1</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <th colspan="2">'P0tato'</th>
+                                </tr>
+
+                                <tr>
+                                    <td>pattern:</td>
+
+                                    <td>dictionary</td>
+                                </tr>
+
+                                <tr>
+                                    <td>entropy:</td>
+
+                                    <td>13.215229625747925</td>
+                                </tr>
+
+                                <tr>
+                                    <td>dict-name:</td>
+
+                                    <td>passwords</td>
+                                </tr>
+
+                                <tr>
+                                    <td>rank:</td>
+
+                                    <td>1585</td>
+                                </tr>
+
+                                <tr>
+                                    <td>base-entropy:</td>
+
+                                    <td>10.63026712502677</td>
+                                </tr>
+
+                                <tr>
+                                    <td>upper-entropy:</td>
+
+                                    <td>1</td>
+                                </tr>
+
+                                <tr>
+                                    <td>substitution-entropy:</td>
+
+                                    <td>1.5849625007211563</td>
+                                </tr>
+
+                                <tr>
+                                    <td>substitutions:</td>
+
+                                    <td>0 -&gt; o</td>
+                                </tr>
+
+                                <tr>
+                                    <td>un-substituted:</td>
+
+                                    <td>potato</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <th colspan="2">'3473'</th>
+                                </tr>
+
+                                <tr>
+                                    <td>pattern:</td>
+
+                                    <td>digits</td>
+                                </tr>
+
+                                <tr>
+                                    <td>entropy:</td>
+
+                                    <td>13.28771237954945</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <th colspan="2">'.'</th>
+                                </tr>
+
+                                <tr>
+                                    <td>pattern:</td>
+
+                                    <td>bruteforce</td>
+                                </tr>
+
+                                <tr>
+                                    <td>entropy:</td>
+
+                                    <td>6.569855608330948</td>
+                                </tr>
+
+                                <tr>
+                                    <td>cardinality:</td>
+
+                                    <td>95</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <th colspan="2">'1'</th>
+                                </tr>
+
+                                <tr>
+                                    <td>pattern:</td>
+
+                                    <td>dictionary</td>
+                                </tr>
+
+                                <tr>
+                                    <td>entropy:</td>
+
+                                    <td>2</td>
+                                </tr>
+
+                                <tr>
+                                    <td>dict-name:</td>
+
+                                    <td>english</td>
+                                </tr>
+
+                                <tr>
+                                    <td>rank:</td>
+
+                                    <td>2</td>
+                                </tr>
+
+                                <tr>
+                                    <td>base-entropy:</td>
+
+                                    <td>1</td>
+                                </tr>
+
+                                <tr>
+                                    <td>upper-entropy:</td>
+
+                                    <td>0</td>
+                                </tr>
+
+                                <tr>
+                                    <td>substitution-entropy:</td>
+
+                                    <td>1</td>
+                                </tr>
+
+                                <tr>
+                                    <td>substitutions:</td>
+
+                                    <td>1 -&gt; i</td>
+                                </tr>
+
+                                <tr>
+                                    <td>un-substituted:</td>
+
+                                    <td>i</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <th colspan="2">'2'</th>
+                                </tr>
+
+                                <tr>
+                                    <td>pattern:</td>
+
+                                    <td>bruteforce</td>
+                                </tr>
+
+                                <tr>
+                                    <td>entropy:</td>
+
+                                    <td>6.569855608330948</td>
+                                </tr>
+
+                                <tr>
+                                    <td>cardinality:</td>
+
+                                    <td>95</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </td>
+            </tr>
+
+            <tr>
+                <td>strong:</td>
+
+                <td><strong>yes - 4/4</strong></td>
+            </tr>
+
+            <tr>
+                <td>entropy:</td>
+
+                <td>53.425</td>
+            </tr>
+
+            <tr>
+                <td>crack time:</td>
+
+                <td>centuries</td>
+            </tr>
+
+            <tr>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+    </script>
+    <h1>Parks and Wildlife - Password Strength Test</h1>
+    <p>
+        Basic password tester built on <a href="http://tech.dropbox.com/?p=165">zxcvbn</a>, that runs completely in your browser, no entries or data are sent via the network. Feel free to save this page and run locally.
+    </p>
+    <p>
+      <input id="search-bar" type="text" placeholder="Enter password to check" size="50" />
+    </p>
+    <div id="results"></div>
+  </body>
+</html>

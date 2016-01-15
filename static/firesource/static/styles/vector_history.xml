@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StyledLayerDescriptor version="1.0.0"
+    xmlns:sld="http://www.opengis.net/sld"
+    xmlns:ogc="http://www.opengis.net/ogc"
+    xmlns:gml="http://www.opengis.net/gml"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.opengis.net/sld http://schemas.opengis.net/sld/1.0.0/StyledLayerDescriptor.xsd">
+  <NamedLayer>
+    <Name>default</Name>
+    <UserStyle>
+      <Name>vector_history</Name>
+      <FeatureTypeStyle>
+        <Rule>
+          <Name>Line</Name>
+          <LineSymbolizer> 
+            <Stroke> 
+              <CssParameter name="stroke">#000000</CssParameter> 
+              <CssParameter name="stroke-width">2</CssParameter> 
+            </Stroke> 
+          </LineSymbolizer>
+        </Rule>
+        <Rule>
+           <Name>Cluster</Name>
+           <Title>Cluster</Title>
+           <ogc:Filter>
+             <ogc:PropertyIsGreaterThan>
+               <ogc:PropertyName>count</ogc:PropertyName>
+               <ogc:Literal>1</ogc:Literal>
+             </ogc:PropertyIsGreaterThan>
+           </ogc:Filter>
+          <PointSymbolizer>
+            <Graphic>
+               <Mark>
+                 <WellKnownName>circle</WellKnownName>
+                 <Fill>
+                   <CssParameter name="fill">#AAAAAA</CssParameter>
+                   <CssParameter name="fill-opacity">0.9</CssParameter>
+                 </Fill>
+                 <Stroke>
+                   <CssParameter name="stroke">#000000</CssParameter>
+                   <CssParameter name="stroke-width">2</CssParameter>
+                   <CssParameter name="stroke-opacity">0.9</CssParameter>
+                 </Stroke>                         
+               </Mark>
+               <Size>10</Size>
+            </Graphic>
+          </PointSymbolizer>
+            <TextSymbolizer> 
+               <Label> 
+                  <ogc:PropertyName>count</ogc:PropertyName> 
+               </Label> 
+               <Font> 
+                  <CssParameter name="font-family"> 
+                    <ogc:Literal>Arial</ogc:Literal> 
+                  </CssParameter> 
+                  <CssParameter name="font-size"> 
+                    <ogc:Literal>8</ogc:Literal> 
+                  </CssParameter> 
+                  <CssParameter name="font-weight"> 
+                    <ogc:Literal>bold</ogc:Literal> 
+                  </CssParameter> 
+               </Font> 
+            </TextSymbolizer>
+        </Rule>
+        <Rule>
+           <Name>Red Fill</Name>
+           <Title>Red Fill</Title>
+           <ogc:Filter>
+             <ogc:PropertyIsGreaterThan>
+               <ogc:PropertyName>age</ogc:PropertyName>
+               <ogc:Literal>24</ogc:Literal>
+             </ogc:PropertyIsGreaterThan>
+           </ogc:Filter>
+          <PointSymbolizer>
+            <Graphic>
+               <Mark>
+                 <WellKnownName>circle</WellKnownName>
+                 <Fill>
+                   <CssParameter name="fill">#FF0000</CssParameter>
+                   <CssParameter name="fill-opacity">0.1</CssParameter>
+                 </Fill>
+                 <Stroke>
+                   <CssParameter name="stroke">#000000</CssParameter>
+                   <CssParameter name="stroke-width">2</CssParameter>
+                   <CssParameter name="stroke-opacity">0.9</CssParameter>
+                 </Stroke>                         
+               </Mark>
+               <Size>8</Size>
+            </Graphic>
+          </PointSymbolizer>
+        </Rule>
+        <Rule>
+           <Name>Red Fill</Name>
+           <Title>Red Fill</Title>
+           <ogc:Filter>
+             <ogc:PropertyIsLessThanOrEqualTo>
+               <ogc:PropertyName>age</ogc:PropertyName>
+               <ogc:Literal>24</ogc:Literal>
+             </ogc:PropertyIsLessThanOrEqualTo>
+           </ogc:Filter>
+          <PointSymbolizer>
+            <Graphic>
+               <Mark>
+                 <WellKnownName>circle</WellKnownName>
+                 <Fill>
+                   <CssParameter name="fill">#FF0000</CssParameter>
+                   <CssParameter name="fill-opacity">0.3</CssParameter>
+                 </Fill>
+                 <Stroke>
+                   <CssParameter name="stroke">#000000</CssParameter>
+                   <CssParameter name="stroke-width">2</CssParameter>
+                   <CssParameter name="stroke-opacity">0.9</CssParameter>
+                 </Stroke>                         
+               </Mark>
+               <Size>8</Size>
+            </Graphic>
+          </PointSymbolizer>
+        </Rule>
+        <Rule>
+           <Name>Red Fill</Name>
+           <Title>Red Fill</Title>
+           <ogc:Filter>
+             <ogc:PropertyIsLessThanOrEqualTo>
+               <ogc:PropertyName>age</ogc:PropertyName>
+               <ogc:Literal>12</ogc:Literal>
+             </ogc:PropertyIsLessThanOrEqualTo>
+           </ogc:Filter>
+          <PointSymbolizer>
+            <Graphic>
+               <Mark>
+                 <WellKnownName>circle</WellKnownName>
+                 <Fill>
+                   <CssParameter name="fill">#FF0000</CssParameter>
+                   <CssParameter name="fill-opacity">0.5</CssParameter>
+                 </Fill>
+                 <Stroke>
+                   <CssParameter name="stroke">#000000</CssParameter>
+                   <CssParameter name="stroke-width">2</CssParameter>
+                   <CssParameter name="stroke-opacity">0.9</CssParameter>
+                 </Stroke>                         
+               </Mark>
+               <Size>8</Size>
+            </Graphic>
+          </PointSymbolizer>
+        </Rule>
+        <Rule>
+           <Name>Red Fill</Name>
+           <Title>Red Fill</Title>
+           <ogc:Filter>
+             <ogc:PropertyIsLessThanOrEqualTo>
+               <ogc:PropertyName>age</ogc:PropertyName>
+               <ogc:Literal>6</ogc:Literal>
+             </ogc:PropertyIsLessThanOrEqualTo>
+           </ogc:Filter>
+          <PointSymbolizer>
+            <Graphic>
+               <Mark>
+                 <WellKnownName>circle</WellKnownName>
+                 <Fill>
+                   <CssParameter name="fill">#FF0000</CssParameter>
+                   <CssParameter name="fill-opacity">0.7</CssParameter>
+                 </Fill>
+                 <Stroke>
+                   <CssParameter name="stroke">#000000</CssParameter>
+                   <CssParameter name="stroke-width">2</CssParameter>
+                   <CssParameter name="stroke-opacity">0.9</CssParameter>
+                 </Stroke>                         
+               </Mark>
+               <Size>8</Size>
+            </Graphic>
+          </PointSymbolizer>
+        </Rule>
+        <Rule>
+           <Name>Red Fill</Name>
+           <Title>Red Fill</Title>
+           <ogc:Filter>
+             <ogc:PropertyIsLessThanOrEqualTo>
+               <ogc:PropertyName>age</ogc:PropertyName>
+               <ogc:Literal>3</ogc:Literal>
+             </ogc:PropertyIsLessThanOrEqualTo>
+           </ogc:Filter>
+          <PointSymbolizer>
+            <Graphic>
+               <Mark>
+                 <WellKnownName>circle</WellKnownName>
+                 <Fill>
+                   <CssParameter name="fill">#FF0000</CssParameter>
+                   <CssParameter name="fill-opacity">0.9</CssParameter>
+                 </Fill>
+                 <Stroke>
+                   <CssParameter name="stroke">#000000</CssParameter>
+                   <CssParameter name="stroke-width">2</CssParameter>
+                   <CssParameter name="stroke-opacity">0.9</CssParameter>
+                 </Stroke>                         
+               </Mark>
+               <Size>8</Size>
+            </Graphic>
+          </PointSymbolizer>
+        </Rule>
+        <Rule>
+           <Name>Yellow Fill</Name>
+           <Title>Yellow Fill</Title>
+           <ogc:Filter>
+             <ogc:PropertyIsLessThanOrEqualTo>
+               <ogc:PropertyName>age</ogc:PropertyName>
+               <ogc:Literal>3</ogc:Literal>
+             </ogc:PropertyIsLessThanOrEqualTo>
+           </ogc:Filter>
+           <PointSymbolizer>
+             <Graphic>
+               <Mark>
+                 <WellKnownName>circle</WellKnownName>
+                 <Fill>
+                   <CssParameter name="fill">#FFFF00</CssParameter>
+                   <CssParameter name="fill-opacity">0.9</CssParameter>
+                 </Fill>
+                 <Stroke>
+                   <CssParameter name="stroke">#000000</CssParameter>
+                   <CssParameter name="stroke-width">2</CssParameter>
+                   <CssParameter name="stroke-opacity">0.9</CssParameter>
+                 </Stroke>                         
+               </Mark>
+               <Size>8</Size>
+             </Graphic>
+           </PointSymbolizer>
+        </Rule>
+        <Rule>
+           <Name>Green Fill</Name>
+           <Title>Green Fill</Title>
+           <ogc:Filter>
+             <ogc:PropertyIsLessThanOrEqualTo>
+               <ogc:PropertyName>age</ogc:PropertyName>
+               <ogc:Literal>1</ogc:Literal>
+             </ogc:PropertyIsLessThanOrEqualTo>
+           </ogc:Filter>
+           <PointSymbolizer>
+             <Graphic>
+               <Mark>
+                 <WellKnownName>circle</WellKnownName>
+                 <Fill>
+                   <CssParameter name="fill">#00FF00</CssParameter>
+                   <CssParameter name="fill-opacity">0.9</CssParameter>
+                 </Fill>
+                 <Stroke>
+                   <CssParameter name="stroke">#000000</CssParameter>
+                   <CssParameter name="stroke-width">2</CssParameter>
+                   <CssParameter name="stroke-opacity">0.9</CssParameter>
+                 </Stroke>                         
+               </Mark>
+               <Size>8</Size>
+             </Graphic>
+           </PointSymbolizer>
+        </Rule>
+      </FeatureTypeStyle>
+    </UserStyle>
+  </NamedLayer>
+ </StyledLayerDescriptor>
+
